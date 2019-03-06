@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4716609F222FC1B400E69830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716609E222FC1B400E69830 /* AppDelegate.swift */; };
-		471660A1222FC1B400E69830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660A0222FC1B400E69830 /* ViewController.swift */; };
 		471660A4222FC1B400E69830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471660A2222FC1B400E69830 /* Main.storyboard */; };
 		471660A6222FC1B600E69830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471660A5222FC1B600E69830 /* Assets.xcassets */; };
 		471660A9222FC1B600E69830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471660A7222FC1B600E69830 /* LaunchScreen.storyboard */; };
+		471660B4223004D200E69830 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660B3223004D200E69830 /* Movie.swift */; };
+		471660B7223009BC00E69830 /* Seeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 471660B6223009BC00E69830 /* Seeds.json */; };
+		471660BB22300AC000E69830 /* ShowcaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660BA22300AC000E69830 /* ShowcaseTableViewCell.swift */; };
+		471660BD22300D9500E69830 /* ForYouTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660BC22300D9500E69830 /* ForYouTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4716609B222FC1B400E69830 /* iTunes Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4716609E222FC1B400E69830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		471660A0222FC1B400E69830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		471660A3222FC1B400E69830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		471660A5222FC1B600E69830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471660A8222FC1B600E69830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471660AA222FC1B600E69830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		471660B3223004D200E69830 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		471660B6223009BC00E69830 /* Seeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Seeds.json; sourceTree = "<group>"; };
+		471660BA22300AC000E69830 /* ShowcaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseTableViewCell.swift; sourceTree = "<group>"; };
+		471660BC22300D9500E69830 /* ForYouTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		4716609D222FC1B400E69830 /* iTunes Movies */ = {
 			isa = PBXGroup;
 			children = (
+				471660B5223004D900E69830 /* Model */,
+				471660B2223004AE00E69830 /* View */,
+				471660B12230048E00E69830 /* Controller */,
+				471660B02230046D00E69830 /* Support Files */,
+				471660B6223009BC00E69830 /* Seeds.json */,
+			);
+			path = "iTunes Movies";
+			sourceTree = "<group>";
+		};
+		471660B02230046D00E69830 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				4716609E222FC1B400E69830 /* AppDelegate.swift */,
-				471660A0222FC1B400E69830 /* ViewController.swift */,
-				471660A2222FC1B400E69830 /* Main.storyboard */,
 				471660A5222FC1B600E69830 /* Assets.xcassets */,
 				471660A7222FC1B600E69830 /* LaunchScreen.storyboard */,
 				471660AA222FC1B600E69830 /* Info.plist */,
 			);
-			path = "iTunes Movies";
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		471660B12230048E00E69830 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				471660BC22300D9500E69830 /* ForYouTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		471660B2223004AE00E69830 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				471660A2222FC1B400E69830 /* Main.storyboard */,
+				471660BA22300AC000E69830 /* ShowcaseTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		471660B5223004D900E69830 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				471660B3223004D200E69830 /* Movie.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +165,7 @@
 			files = (
 				471660A9222FC1B600E69830 /* LaunchScreen.storyboard in Resources */,
 				471660A6222FC1B600E69830 /* Assets.xcassets in Resources */,
+				471660B7223009BC00E69830 /* Seeds.json in Resources */,
 				471660A4222FC1B400E69830 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471660A1222FC1B400E69830 /* ViewController.swift in Sources */,
 				4716609F222FC1B400E69830 /* AppDelegate.swift in Sources */,
+				471660BD22300D9500E69830 /* ForYouTableViewController.swift in Sources */,
+				471660BB22300AC000E69830 /* ShowcaseTableViewCell.swift in Sources */,
+				471660B4223004D200E69830 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

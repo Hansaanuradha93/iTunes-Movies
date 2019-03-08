@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVKit
 
 class MovieDetailsViewController: UIViewController {
 
@@ -15,6 +15,10 @@ class MovieDetailsViewController: UIViewController {
     // MARK: - Properites
     var movie : Movie!
     var image : UIImage!
+    
+    // video player properties
+    var player = AVPlayer()
+    var playerViewController = AVPlayerViewController()
     
     
     // MARK: - IBOutlets
@@ -46,13 +50,24 @@ class MovieDetailsViewController: UIViewController {
         nameLabel.text = movie.trackName!
         descriptionLabel.text = movie.longDescription!
         
+        // Lets add rounded corners for poster image view
+        posterImageView.applyRoundedCorners(radius: 7.0)
+        
         
     }
     
 
     // MARK: - IBActions
     @IBAction func playTrailerButtonTapped(_ sender: UIButton) {
-        print("Lets play the trailer")
+        
+        if let trailerUrlString = movie.previewUrl, let trailerUrl = URL(string: trailerUrlString) {
+            
+            player = AVPlayer(url: trailerUrl)
+            playerViewController.player = player
+            
+            present(playerViewController, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {

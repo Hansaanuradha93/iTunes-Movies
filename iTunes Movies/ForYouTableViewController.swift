@@ -11,6 +11,7 @@ import UIKit
 class ForYouTableViewController: UITableViewController {
 
     // MARK: - Properties
+    static let segueIdentifier = "goToMovieDetailsVC"
     var movies = [Movie]()
     
     
@@ -48,6 +49,23 @@ class ForYouTableViewController: UITableViewController {
         }
         
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ForYouTableViewController.segueIdentifier {
+            print("Hello")
+            
+            let destinationVC = segue.destination as! MovieDetailsViewController
+            
+            if let indexPath = sender as? IndexPath, let showcaseCell = tableView.cellForRow(at: indexPath) as? ShowcaseTableViewCell {
+                
+                destinationVC.image = showcaseCell.bannerImage
+                destinationVC.movie = self.movies[indexPath.row]
+            }
+        }
+    }
+
 
 
  
@@ -111,3 +129,18 @@ extension ForYouTableViewController {
     }
     
 }
+
+
+// MARK: - Table view delagate
+
+extension ForYouTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if (indexPath.section == 0 && indexPath.row == 0) || (indexPath.section == 0 && indexPath.row == 2) {
+            
+            self.performSegue(withIdentifier: ForYouTableViewController.segueIdentifier, sender: indexPath)
+        }
+    }
+}
+

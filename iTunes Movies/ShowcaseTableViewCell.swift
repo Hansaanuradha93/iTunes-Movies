@@ -12,6 +12,7 @@ class ShowcaseTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     static let reuseIdentifier = "ShowcaseCell"
+    var bannerImage : UIImage!
     
     // MARK: - IBOutlets
     @IBOutlet weak var bannerImageView: UIImageView!
@@ -25,6 +26,7 @@ class ShowcaseTableViewCell: UITableViewCell {
             genreLabel.text = movie.primaryGenreName!
             
             // TODO: Make a request to download thumbnail and banner images
+            bannerImage = bannerImageView.image
 
             // Lets apply rounded corners for thumbnail image view
             thumbnailImageView.applyRoundedCorners(radius: 7.0)

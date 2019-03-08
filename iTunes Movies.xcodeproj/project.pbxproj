@@ -20,6 +20,7 @@
 		471660C32230C16100E69830 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660C22230C16100E69830 /* MovieCollectionViewCell.swift */; };
 		471660C9223116DE00E69830 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660C8223116DE00E69830 /* String+Extensions.swift */; };
 		471660CB2231180C00E69830 /* UIViews+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660CA2231180C00E69830 /* UIViews+Extensions.swift */; };
+		47FBD4DC22326F8600FCEDDF /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		471660C22230C16100E69830 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		471660C8223116DE00E69830 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		471660CA2231180C00E69830 /* UIViews+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViews+Extensions.swift"; sourceTree = "<group>"; };
+		47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				471660BC22300D9500E69830 /* ForYouTableViewController.swift */,
+				47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FBD4DC22326F8600FCEDDF /* MovieDetailsViewController.swift in Sources */,
 				4716609F222FC1B400E69830 /* AppDelegate.swift in Sources */,
 				471660C12230B26A00E69830 /* MovieCollectionDataSource.swift in Sources */,
 				471660BD22300D9500E69830 /* ForYouTableViewController.swift in Sources */,

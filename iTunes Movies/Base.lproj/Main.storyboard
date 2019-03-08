@@ -184,17 +184,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="FOR YOU" id="IZe-BT-bCT"/>
                     <connections>
-                        <segue destination="Yri-w2-5v6" kind="presentation" id="LIj-MF-tPO"/>
+                        <segue destination="Yri-w2-5v6" kind="presentation" identifier="goToMovieDetailsVC" id="LIj-MF-tPO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7e-tl-4km" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852" y="-488.00599700149928"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Details View Controller-->
         <scene sceneID="daV-oJ-cNF">
             <objects>
-                <viewController id="Yri-w2-5v6" sceneMemberID="viewController">
+                <viewController id="Yri-w2-5v6" customClass="MovieDetailsViewController" customModule="iTunes_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9bL-ws-vfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,12 +248,72 @@
                                             <state key="normal" title="PLAY TRAILER">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                    <real key="value" value="0.25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="playTrailerButtonTapped:" destination="Yri-w2-5v6" eventType="touchUpInside" id="cHc-Jc-bwh"/>
+                                            </connections>
                                         </button>
+                                        <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCD-84-PQA">
+                                            <rect key="frame" x="319" y="32" width="36" height="36"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O6W-aa-Ls3">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xe-9Q-Ald">
+                                                        <rect key="frame" x="4" y="4" width="28" height="28"/>
+                                                        <state key="normal" image="icon-close"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="Yri-w2-5v6" eventType="touchUpInside" id="9v0-tz-3hy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4Xe-9Q-Ald" firstAttribute="top" secondItem="O6W-aa-Ls3" secondAttribute="top" constant="4" id="CQ7-Ij-nhz"/>
+                                                    <constraint firstItem="4Xe-9Q-Ald" firstAttribute="leading" secondItem="O6W-aa-Ls3" secondAttribute="leading" constant="4" id="kKd-BI-nGJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Xe-9Q-Ald" secondAttribute="bottom" constant="4" id="l0G-kA-gOT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4Xe-9Q-Ald" secondAttribute="trailing" constant="4" id="uU4-J6-4pb"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="7Bp-xm-HKf"/>
+                                                <constraint firstAttribute="width" constant="36" id="hDd-5u-sQG"/>
+                                            </constraints>
+                                            <blurEffect style="dark"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="18"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                    <real key="value" value="0.25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </visualEffectView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="xCD-84-PQA" secondAttribute="trailing" constant="20" id="0uZ-Dv-0D5"/>
                                         <constraint firstItem="rdH-Ak-fKX" firstAttribute="centerX" secondItem="I7F-gZ-bbz" secondAttribute="centerX" id="1XN-JD-1o8"/>
                                         <constraint firstItem="xV1-c4-dHo" firstAttribute="top" secondItem="I7F-gZ-bbz" secondAttribute="top" constant="64" id="D9f-Be-D21"/>
                                         <constraint firstItem="cFi-Ce-0TR" firstAttribute="top" secondItem="rdH-Ak-fKX" secondAttribute="bottom" constant="28" id="EEL-07-UBW"/>
+                                        <constraint firstItem="xCD-84-PQA" firstAttribute="top" secondItem="I7F-gZ-bbz" secondAttribute="top" constant="32" id="Qtw-5k-RVj"/>
                                         <constraint firstAttribute="trailing" secondItem="rdH-Ak-fKX" secondAttribute="trailing" constant="20" id="YRn-Hq-nBs"/>
                                         <constraint firstItem="xV1-c4-dHo" firstAttribute="centerX" secondItem="I7F-gZ-bbz" secondAttribute="centerX" id="gdv-FA-pOH"/>
                                         <constraint firstItem="cFi-Ce-0TR" firstAttribute="centerX" secondItem="I7F-gZ-bbz" secondAttribute="centerX" id="nf6-Nr-jfK"/>
@@ -297,6 +357,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P3g-9H-ecn"/>
                     </view>
+                    <connections>
+                        <outlet property="bannerImageView" destination="N6v-Jr-Pgw" id="Rai-E1-MGq"/>
+                        <outlet property="descriptionLabel" destination="CTb-xm-zCd" id="uZz-yb-v7e"/>
+                        <outlet property="genreLabel" destination="eBt-oc-ara" id="1f8-ai-CnZ"/>
+                        <outlet property="nameLabel" destination="298-e4-Gbi" id="qOX-Sf-7n7"/>
+                        <outlet property="posterImageView" destination="xV1-c4-dHo" id="cUK-GE-KFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajS-jc-WVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,6 +535,7 @@
     </scenes>
     <resources>
         <image name="banner-1" width="1920" height="1080"/>
+        <image name="icon-close" width="39" height="39"/>
         <image name="nav-discover" width="36" height="36"/>
         <image name="nav-foryou" width="48" height="48"/>
         <image name="nav-profile" width="48" height="48"/>

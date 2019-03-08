@@ -65,18 +65,29 @@ extension ForYouTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // Lets return the first row cell
-        if indexPath.section == 0 && indexPath.row == 0 {
+        // Lets return the 1st row and 3rd cell
+        if (indexPath.section == 0 && indexPath.row == 0) || (indexPath.section == 0 && indexPath.row == 2) {
             let cell = tableView.dequeueReusableCell(withIdentifier: ShowcaseTableViewCell.reuseIdentifier, for: indexPath) as! ShowcaseTableViewCell
             
             if movies.count > 0 {
-                cell.movie = movies[0]
+                cell.movie = movies[indexPath.row]
             }
+            
+            cell.selectionStyle = .none
+            
+            return cell
+        }
+            // Lets return the 2nd row and 4th cell
+        else if (indexPath.section == 0 && indexPath.row == 1) || (indexPath.section == 0 && indexPath.row == 3) {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.reuseIdentifier, for: indexPath) as! MovieTableViewCell
+            
+            cell.movies = movies
             
             cell.selectionStyle = .none
             
@@ -90,8 +101,10 @@ extension ForYouTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         // Lets set the first row cell height
-        if indexPath.section == 0 && indexPath.row == 0 {
+        if (indexPath.section == 0 && indexPath.row == 0) || (indexPath.section == 0 && indexPath.row == 2) {
             return 222.0
+        } else if (indexPath.section == 0 && indexPath.row == 1) || (indexPath.section == 0 && indexPath.row == 3) {
+            return 305.0
         }
         
         return super.tableView(tableView, heightForRowAt: indexPath)

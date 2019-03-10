@@ -21,11 +21,35 @@ class MovieCollectionViewCell: UICollectionViewCell {
     var movie : Movie! {
         didSet {
             nameLabel.text = movie.trackName!.truncate(length: 15)
-            
-            // Lets apply rounded corners for thumbnail image view
-            thumbnailImageView.applyRoundedCorners(radius: 7.0)
-            
+     
             // TODO: - Download the thumbnail image from the url
+            if let thumbnailUrl = URL(string: movie.artworkUrl100!) {
+                
+                // Url request
+                let urlRequest = URLRequest(url: thumbnailUrl)
+                
+                // Network processor
+                let networkProcessor = NetworkProcessor(request: urlRequest)
+                
+                // Lets donwload the image data from the network processor
+                networkProcessor.downloadData { [weak self](data, httpsResponse, error) in
+                    if error == nil {
+                        if let imageData = data {
+                            // Lets move to the main queue
+                            DispatchQueue.main.async {
+                                let image = UIImage(data: imageData)
+                                self?.thumbnailImageView.image = image
+                                // Lets apply rounded corners for thumbnail image view
+                                self?.thumbnailImageView.applyRoundedCorners(radius: 7.0)
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            
         }
     }
     

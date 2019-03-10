@@ -20,7 +20,10 @@
 		471660C32230C16100E69830 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660C22230C16100E69830 /* MovieCollectionViewCell.swift */; };
 		471660C9223116DE00E69830 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660C8223116DE00E69830 /* String+Extensions.swift */; };
 		471660CB2231180C00E69830 /* UIViews+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660CA2231180C00E69830 /* UIViews+Extensions.swift */; };
+		47C1631D2234041400FEF0FD /* ItunesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1631C2234041400FEF0FD /* ItunesClient.swift */; };
 		47FBD4DC22326F8600FCEDDF /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */; };
+		47FBD4DF2232C61000FCEDDF /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */; };
+		47FBD4E12232C82500FCEDDF /* ItnuesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 		471660C22230C16100E69830 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		471660C8223116DE00E69830 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		471660CA2231180C00E69830 /* UIViews+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViews+Extensions.swift"; sourceTree = "<group>"; };
+		47C1631C2234041400FEF0FD /* ItunesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesClient.swift; sourceTree = "<group>"; };
 		47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItnuesEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 				471660B2223004AE00E69830 /* View */,
 				471660B12230048E00E69830 /* Controller */,
 				471660C62230C68200E69830 /* Datasource */,
+				47FBD4DD2232C5E600FCEDDF /* Networking */,
 				471660C7223116AF00E69830 /* Extensions */,
 				471660B02230046D00E69830 /* Support Files */,
 			);
@@ -155,6 +162,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		47FBD4DD2232C5E600FCEDDF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */,
+				47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */,
+				47C1631C2234041400FEF0FD /* ItunesClient.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,8 +248,11 @@
 				4716609F222FC1B400E69830 /* AppDelegate.swift in Sources */,
 				471660C12230B26A00E69830 /* MovieCollectionDataSource.swift in Sources */,
 				471660BD22300D9500E69830 /* ForYouTableViewController.swift in Sources */,
+				47FBD4E12232C82500FCEDDF /* ItnuesEndPoint.swift in Sources */,
 				471660BF2230377800E69830 /* MovieTableViewCell.swift in Sources */,
 				471660C9223116DE00E69830 /* String+Extensions.swift in Sources */,
+				47C1631D2234041400FEF0FD /* ItunesClient.swift in Sources */,
+				47FBD4DF2232C61000FCEDDF /* NetworkProcessor.swift in Sources */,
 				471660C32230C16100E69830 /* MovieCollectionViewCell.swift in Sources */,
 				471660CB2231180C00E69830 /* UIViews+Extensions.swift in Sources */,
 				471660BB22300AC000E69830 /* ShowcaseTableViewCell.swift in Sources */,

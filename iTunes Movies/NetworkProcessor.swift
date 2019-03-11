@@ -1,10 +1,11 @@
 //
 //  NetworkProcessor.swift
-//  AppStore-DucTran
+//  iTunes Movies
 //
-//  Created by Duc Tran on 6/20/17.
-//  Copyright © 2017 Developers Academy. All rights reserved.
+//  Created by Hansa Anuradha on 3/11/19.
+//  Copyright © 2019 Hansa Anuradha. All rights reserved.
 //
+
 
 import Foundation
 
@@ -100,24 +101,4 @@ class NetworkProcessor
         dataTask.resume()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

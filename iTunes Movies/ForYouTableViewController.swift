@@ -53,9 +53,7 @@ class ForYouTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == ForYouTableViewController.segueIdentifier {
-            print("Hello")
-            
+        if segue.identifier == ForYouTableViewController.segueIdentifier {            
             let destinationVC = segue.destination as! MovieDetailsViewController
             
             if let indexPath = sender as? IndexPath, let showcaseCell = tableView.cellForRow(at: indexPath) as? ShowcaseTableViewCell {

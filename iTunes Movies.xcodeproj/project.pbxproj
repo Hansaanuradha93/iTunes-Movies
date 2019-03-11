@@ -21,8 +21,10 @@
 		471660C9223116DE00E69830 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660C8223116DE00E69830 /* String+Extensions.swift */; };
 		471660CB2231180C00E69830 /* UIViews+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471660CA2231180C00E69830 /* UIViews+Extensions.swift */; };
 		47C1631D2234041400FEF0FD /* ItunesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1631C2234041400FEF0FD /* ItunesClient.swift */; };
+		47F5A7DA22366F6400F7DBE9 /* ItunesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5A7D922366F6400F7DBE9 /* ItunesSearchViewController.swift */; };
+		47F5A7DE2236757700F7DBE9 /* CollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5A7DD2236757700F7DBE9 /* CollectionViewGridLayout.swift */; };
+		47F5A7E02236767F00F7DBE9 /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5A7DF2236767F00F7DBE9 /* NetworkProcessor.swift */; };
 		47FBD4DC22326F8600FCEDDF /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */; };
-		47FBD4DF2232C61000FCEDDF /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */; };
 		47FBD4E12232C82500FCEDDF /* ItnuesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,10 @@
 		471660C8223116DE00E69830 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		471660CA2231180C00E69830 /* UIViews+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViews+Extensions.swift"; sourceTree = "<group>"; };
 		47C1631C2234041400FEF0FD /* ItunesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesClient.swift; sourceTree = "<group>"; };
+		47F5A7D922366F6400F7DBE9 /* ItunesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchViewController.swift; sourceTree = "<group>"; };
+		47F5A7DD2236757700F7DBE9 /* CollectionViewGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGridLayout.swift; sourceTree = "<group>"; };
+		47F5A7DF2236767F00F7DBE9 /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
-		47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItnuesEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 			children = (
 				471660BC22300D9500E69830 /* ForYouTableViewController.swift */,
 				47FBD4DB22326F8600FCEDDF /* MovieDetailsViewController.swift */,
+				47F5A7D922366F6400F7DBE9 /* ItunesSearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				471660A2222FC1B400E69830 /* Main.storyboard */,
+				47F5A7DC2236752E00F7DBE9 /* CollectionView Grid Layout */,
 				471660C42230C2C200E69830 /* TableViewCells */,
 				471660C52230C2D100E69830 /* CollectionViewCells */,
 			);
@@ -162,12 +168,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		47F5A7DC2236752E00F7DBE9 /* CollectionView Grid Layout */ = {
+			isa = PBXGroup;
+			children = (
+				47F5A7DD2236757700F7DBE9 /* CollectionViewGridLayout.swift */,
+			);
+			name = "CollectionView Grid Layout";
+			sourceTree = "<group>";
+		};
 		47FBD4DD2232C5E600FCEDDF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				47FBD4DE2232C61000FCEDDF /* NetworkProcessor.swift */,
 				47FBD4E02232C82500FCEDDF /* ItnuesEndPoint.swift */,
 				47C1631C2234041400FEF0FD /* ItunesClient.swift */,
+				47F5A7DF2236767F00F7DBE9 /* NetworkProcessor.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F5A7DA22366F6400F7DBE9 /* ItunesSearchViewController.swift in Sources */,
 				47FBD4DC22326F8600FCEDDF /* MovieDetailsViewController.swift in Sources */,
 				4716609F222FC1B400E69830 /* AppDelegate.swift in Sources */,
 				471660C12230B26A00E69830 /* MovieCollectionDataSource.swift in Sources */,
@@ -252,11 +267,12 @@
 				471660BF2230377800E69830 /* MovieTableViewCell.swift in Sources */,
 				471660C9223116DE00E69830 /* String+Extensions.swift in Sources */,
 				47C1631D2234041400FEF0FD /* ItunesClient.swift in Sources */,
-				47FBD4DF2232C61000FCEDDF /* NetworkProcessor.swift in Sources */,
+				47F5A7E02236767F00F7DBE9 /* NetworkProcessor.swift in Sources */,
 				471660C32230C16100E69830 /* MovieCollectionViewCell.swift in Sources */,
 				471660CB2231180C00E69830 /* UIViews+Extensions.swift in Sources */,
 				471660BB22300AC000E69830 /* ShowcaseTableViewCell.swift in Sources */,
 				471660B4223004D200E69830 /* Movie.swift in Sources */,
+				47F5A7DE2236757700F7DBE9 /* CollectionViewGridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

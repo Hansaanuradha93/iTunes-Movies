@@ -22,7 +22,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         didSet {
             nameLabel.text = movie.trackName!.truncate(length: 15)
      
-            // TODO: - Download the thumbnail image from the url
+            // Lets Download the thumbnail image from the url
             if let thumbnailUrl = URL(string: movie.artworkUrl100!) {
                 
                 // Url request

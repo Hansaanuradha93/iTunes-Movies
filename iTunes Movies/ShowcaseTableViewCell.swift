@@ -25,7 +25,7 @@ class ShowcaseTableViewCell: UITableViewCell {
             nameLabel.text = movie.trackName!
             genreLabel.text = movie.primaryGenreName!
             
-            // TODO: Make a request to download thumbnail and banner images
+            //Lets Make a request to download thumbnail and banner images
             
             if let thumbnailrUrl = URL(string: movie.artworkUrl100!) {
                 
